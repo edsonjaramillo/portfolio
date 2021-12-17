@@ -508,7 +508,7 @@ p {
 
 .cta {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAMRJREFUaEPtljEOwjAAxJrf8SOE0jER4kf8Loi1EpuvSoM7dnBzdoaWbbGnLLZn+zmotfbc9/1xtcEOmr2YhS5RqPd+Px60lHIbY7yP72utr5lHeeVmrvM9m4UsdLKB//mXO1ks9jkLYSpDIAuFxGJYC2EqQyALhcRiWAthKkMgC4XEYlgLYSpDIAuFxGJYC2EqQyALhcRiWAthKkMgC4XEYlgLYSpDIAuFxGJYC2EqQyALhcRiWAthKkMgC4XEYtjlCn0AC+8wNY7+9VoAAAAASUVORK5CYII=");
-  min-height: calc(100vh - 2.875rem);
+  min-height: calc(100vh - (2.875rem * 3));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,6 +635,12 @@ p {
     font-size: 1.15rem;
     border: 0.2rem solid #172c4b;
     width: clamp(13rem, 5vw, 14rem);
+  }
+}
+
+@media (min-width: 769px) {
+  .cta {
+    min-height: calc(100vh - 2.875rem);
   }
 }
 
