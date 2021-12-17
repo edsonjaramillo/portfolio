@@ -96,7 +96,7 @@
     @include input-size(1rem);
     border: 1px solid $grayscale-500;
     color: $grayscale-700;
-    font-family: 'Inter';
+    font-family: $font-family;
 
     &:focus {
       background-color: $brand-secondary-200;

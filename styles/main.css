@@ -5,7 +5,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 h1,
@@ -130,7 +130,7 @@ p {
 
 .navbar {
   width: 100%;
-  background-color: rgba(245, 245, 245, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
   padding: 0.5rem 0;
@@ -159,12 +159,12 @@ p {
 }
 
 .navbar__hamburger {
-  background-color: #f5f5f5;
+  background-color: white;
   fill: #1f2937;
 }
 
 .navbar__exit {
-  background-color: #f5f5f5;
+  background-color: white;
   position: absolute;
   right: 0;
   margin-right: 1rem;
@@ -173,7 +173,7 @@ p {
 
 .navbar__shoppingbag {
   position: relative;
-  background-color: #f5f5f5;
+  background-color: white;
   fill: #1f2937;
   height: 2.4rem;
   width: 2.4rem;
@@ -186,7 +186,7 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,7 +217,7 @@ p {
 .navbar__spacer {
   height: 3.5rem;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -234,7 +234,7 @@ p {
     width: -moz-fit-content;
     width: fit-content;
     margin: auto 0;
-    background-color: #f5f5f5;
+    background-color: white;
   }
   .navbar__link {
     font-size: 1.25rem;
@@ -264,7 +264,7 @@ p {
   font-size: 3rem;
   font-weight: 600;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid white;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -278,12 +278,12 @@ p {
 }
 
 .footer__header {
-  color: #f5f5f5;
+  color: white;
   font-weight: 600;
 }
 
 .footer__link {
-  color: #f5f5f5;
+  color: white;
   text-decoration: none;
 }
 
@@ -323,7 +323,7 @@ p {
 
 .footer__socialicon {
   width: 25px;
-  fill: #f5f5f5;
+  fill: white;
 }
 
 .footer__clearsvg {
@@ -337,7 +337,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #f5f5f5;
+  color: white;
   font-size: 0.9rem;
 }
 
@@ -410,7 +410,7 @@ p {
 }
 
 .section--bg--grayscale-100 {
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 .section--bg--grayscale-200 {
@@ -466,7 +466,7 @@ p {
 }
 
 .section--text--grayscale-100 {
-  color: #f5f5f5;
+  color: white;
 }
 
 .section--text--grayscale-200 {
@@ -554,7 +554,7 @@ p {
      -moz-appearance: none;
           appearance: none;
   background-color: #172c4b;
-  color: #f5f5f5;
+  color: white;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -592,7 +592,7 @@ p {
   text-align: center;
   cursor: pointer;
   font-weight: 600;
-  background-color: #f5f5f5;
+  background-color: white;
   border-radius: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -685,14 +685,83 @@ p {
   background-color: #c62131;
   max-width: 14.75rem;
   border-radius: 0.5rem;
-  color: #f5f5f5;
+  color: white;
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
 }
 
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 0rem;
+}
+
+.project__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c62131;
+}
+
+.project__metrics {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.project__metricitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #9ca3af;
+}
+
+.project__metrictitle {
+  font-weight: 400;
+  position: relative;
+}
+
+.project__metrictitle::before {
+  position: absolute;
+  content: '';
+  left: -1.3rem;
+  top: 0.35rem;
+  border-radius: 10rem;
+  width: 0.75rem;
+  aspect-ratio: 1/1;
+  background-color: #008a00;
+}
+
+.project__metricvalue {
+  color: #008a00;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.projectsgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
 .contact {
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 .contact__grid {
@@ -728,7 +797,7 @@ p {
 }
 
 .form {
-  background-color: #f5f5f5;
+  background-color: white;
   position: relative;
   padding: 2rem 0rem;
 }
@@ -771,7 +840,7 @@ p {
 .form__radioinput {
   accent-color: #172c4b;
   margin-right: 0.1rem;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 .form__radiolabel {
@@ -797,12 +866,12 @@ p {
      -moz-appearance: none;
           appearance: none;
   border-radius: 0.5rem;
-  background-color: #f5f5f5;
+  background-color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border: 1px solid #6b7280;
   color: #374151;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .form__input:focus {
@@ -848,7 +917,7 @@ p {
      -moz-appearance: none;
           appearance: none;
   background-color: #c62131;
-  color: #f5f5f5;
+  color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -877,7 +946,7 @@ p {
   border-radius: 0.5rem;
   padding: 1rem;
   text-decoration: none;
-  color: #f5f5f5;
+  color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

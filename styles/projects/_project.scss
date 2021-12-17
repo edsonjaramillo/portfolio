@@ -1,0 +1,57 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  // gap: 1rem;
+  padding: 2rem 0rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $brand-primary;
+  }
+  &__metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    width: 70%;
+    margin: 0 auto;
+    // border: 1px solid red;
+  }
+
+  &__metricitem {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+    // border-top: 1px solid black;
+    border-bottom: 1px solid $grayscale-400;
+    //   border: 1px solid blue;
+  }
+
+  &__metrictitle {
+    font-weight: 400;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -1.3rem;
+      top: 0.35rem;
+      border-radius: 10rem;
+      width: 0.75rem;
+      aspect-ratio: 1/1;
+      background-color: #008a00;
+    }
+  }
+
+  &__metricvalue {
+    color: #008a00;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+}
+
+.projectsgrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  // gap: 3rem;
+}

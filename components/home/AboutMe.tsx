@@ -32,11 +32,12 @@ const AboutMe = () => {
             <a
               className='about__download'
               href='Test_Resume.pdf'
+              download
               onClick={() =>
                 toastNotification('success', 'Thank you for downloading my resume!')
               }>
               <DownloadIcon />
-              <p>Download Resume</p>
+              Download Resume
             </a>
           </div>
         </div>
