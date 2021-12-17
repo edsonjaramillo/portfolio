@@ -124,7 +124,7 @@ const ContactPage = () => {
           {/* Choice */}
           <div className='form__inputgroup'>
             <label className='form__label' htmlFor='phoneNumber'>
-              Contact Choice
+              Response Choice
               {errors.choice?.type === 'required' && <ErrorMessage message='Required' />}
             </label>
 

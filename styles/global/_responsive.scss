@@ -39,6 +39,11 @@
   margin: auto;
 }
 
+.responsive-width-projects {
+  width: clamp(1rem, 90vw, 40rem);
+  margin: auto;
+}
+
 .responsive-width-contact {
   width: 90%;
   margin: auto;
