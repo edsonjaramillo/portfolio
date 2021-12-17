@@ -10,6 +10,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Hello</title>
+        <link rel='canonical' href='https://portfolio-six-rho-28.vercel.app/' />
+        <meta name='theme-color' content='#172c4b' />
       </Head>
       <Navbar />
       <main>
