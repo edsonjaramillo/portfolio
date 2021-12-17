@@ -560,7 +560,7 @@ p {
           appearance: none;
   background-color: #172c4b;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 0.5rem;
@@ -586,7 +586,7 @@ p {
 }
 
 .cta__buttonalt {
-  padding: 0.9375rem 1.5rem;
+  padding: 0.675rem 1.5rem;
   font-size: 1rem;
   border: 0.125rem solid #172c4b;
   color: #172c4b;
@@ -610,6 +610,7 @@ p {
           justify-content: center;
   -webkit-transition: background-color 0.15s ease;
   transition: background-color 0.15s ease;
+  border: 2px solid #172c4b;
 }
 
 .cta__buttonalt:hover {
@@ -625,13 +626,13 @@ p {
     margin: 0 auto;
   }
   .cta__button {
-    padding: 0.8625rem 1.725rem;
+    padding: 0.92rem 1.725rem;
     font-size: 1.15rem;
     margin: 0rem 1rem 0rem 0rem;
     width: clamp(13rem, 5vw, 14rem);
   }
   .cta__buttonalt {
-    padding: 1.05rem 1.725rem;
+    padding: 0.72rem 1.725rem;
     font-size: 1.15rem;
     border: 0.2rem solid #172c4b;
     width: clamp(13rem, 5vw, 14rem);
@@ -691,7 +692,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   background-color: #c62131;
   max-width: 14.75rem;
@@ -750,7 +751,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.6375rem 1.275rem;
+  padding: 0.68rem 1.275rem;
   font-size: 0.85rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1073,7 +1074,7 @@ p {
   background-color: #c62131;
   color: white;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   border-radius: 0.5rem;
   -ms-grid-column-align: end;

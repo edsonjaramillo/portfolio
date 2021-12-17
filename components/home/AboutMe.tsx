@@ -33,6 +33,8 @@ const AboutMe = () => {
               className='about__download'
               href='Test_Resume.pdf'
               download
+              target='_blank'
+              rel='noopener noreferrer'
               onClick={() =>
                 toastNotification('success', 'Thank you for downloading my resume!')
               }>

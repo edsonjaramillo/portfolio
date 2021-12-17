@@ -28,11 +28,6 @@ $text-lineheight-100: 1.6;
   box-shadow: 0 4px 14px 0 $color;
 }
 
-@mixin button-size($size) {
-  padding: ($size * 0.75) ($size * 1.5);
-  font-size: $size;
-}
-
 @mixin input-size($size) {
   padding: ($size * 0.5) $size;
   font-size: $size;
@@ -53,9 +48,15 @@ $text-lineheight-100: 1.6;
     height: $xl;
   }
 }
+$top-padding-multi: 0.8;
+
+@mixin button-size($size) {
+  padding: ($size * $top-padding-multi) ($size * 1.5);
+  font-size: $size;
+}
 
 @mixin button-size-alt($size, $border, $color) {
-  padding: ($size - ($border/2)) (($size * 1.5));
+  padding: (($size * $top-padding-multi) - ($border)) (($size * 1.5));
   font-size: $size;
   border: $border solid $color;
 }
