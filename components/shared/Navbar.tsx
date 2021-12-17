@@ -30,9 +30,12 @@ const Navbar = () => {
               <a className='navbar__logo'>Logo</a>
             </Link>
             <div id='hamburger-menu' className='navbar__links'>
-              {navbarLinks.map((link) => (
+              {/* {navbarLinks.map((link) => (
                 <PageLink key={link.name} route={link.route} name={link.name} />
-              ))}
+              ))} */}
+              <PageLink route='/projects' name='Projects' />
+              <PageLink route='/#about' name='About' />
+              <PageLink route='/contact' name='Contact' />
               <ExitIcon />
             </div>
             <Hamburger />

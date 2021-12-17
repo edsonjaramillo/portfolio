@@ -5,7 +5,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 h1,
@@ -164,12 +164,12 @@ p {
 }
 
 .navbar__hamburger {
-  background-color: white;
+  background-color: #ffffff;
   fill: #1f2937;
 }
 
 .navbar__exit {
-  background-color: white;
+  background-color: #ffffff;
   position: absolute;
   right: 0;
   margin-right: 1rem;
@@ -178,7 +178,7 @@ p {
 
 .navbar__shoppingbag {
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
   fill: #1f2937;
   height: 2.4rem;
   width: 2.4rem;
@@ -191,7 +191,7 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,7 +222,7 @@ p {
 .navbar__spacer {
   height: 3.5rem;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -239,7 +239,7 @@ p {
     width: -moz-fit-content;
     width: fit-content;
     margin: auto 0;
-    background-color: white;
+    background-color: #ffffff;
   }
   .navbar__link {
     font-size: 1.25rem;
@@ -269,7 +269,7 @@ p {
   font-size: 3rem;
   font-weight: 600;
   padding-bottom: 1rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #ffffff;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -283,12 +283,12 @@ p {
 }
 
 .footer__header {
-  color: white;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .footer__link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -328,7 +328,7 @@ p {
 
 .footer__socialicon {
   width: 25px;
-  fill: white;
+  fill: #ffffff;
 }
 
 .footer__clearsvg {
@@ -342,7 +342,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  color: #ffffff;
   font-size: 0.9rem;
 }
 
@@ -415,7 +415,7 @@ p {
 }
 
 .section--bg--grayscale-100 {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .section--bg--grayscale-200 {
@@ -471,7 +471,7 @@ p {
 }
 
 .section--text--grayscale-100 {
-  color: white;
+  color: #ffffff;
 }
 
 .section--text--grayscale-200 {
@@ -559,7 +559,7 @@ p {
      -moz-appearance: none;
           appearance: none;
   background-color: #172c4b;
-  color: white;
+  color: #ffffff;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -597,7 +597,7 @@ p {
   text-align: center;
   cursor: pointer;
   font-weight: 600;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,7 +697,7 @@ p {
   background-color: #c62131;
   max-width: 14.75rem;
   border-radius: 0.5rem;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
@@ -757,7 +757,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.75rem;
-  color: white;
+  color: #ffffff;
   font-weight: 500;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -916,7 +916,7 @@ p {
 }
 
 .contact {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .contact__grid {
@@ -952,7 +952,7 @@ p {
 }
 
 .form {
-  background-color: white;
+  background-color: #ffffff;
   position: relative;
   padding: 2rem 0rem;
 }
@@ -995,7 +995,7 @@ p {
 .form__radioinput {
   accent-color: #172c4b;
   margin-right: 0.1rem;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .form__radiolabel {
@@ -1021,7 +1021,7 @@ p {
      -moz-appearance: none;
           appearance: none;
   border-radius: 0.5rem;
-  background-color: white;
+  background-color: #ffffff;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border: 1px solid #6b7280;
@@ -1072,7 +1072,7 @@ p {
      -moz-appearance: none;
           appearance: none;
   background-color: #c62131;
-  color: white;
+  color: #ffffff;
   font-weight: 600;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -1101,7 +1101,7 @@ p {
   border-radius: 0.5rem;
   padding: 1rem;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
