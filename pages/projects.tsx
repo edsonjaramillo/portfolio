@@ -86,7 +86,7 @@ const Project = ({
       <h2 className='project__title'>{title}</h2>
       <p>{description}</p>
       <div className='project__image'>
-        <Image src={image} width={16} height={9} layout='responsive' />
+        <Image src={image} width={16} height={9} layout='responsive' alt={title} />
         <div className='project__linksgroup'>
           <a
             href={website}
