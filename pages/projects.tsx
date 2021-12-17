@@ -92,7 +92,7 @@ const Project = ({
             href={website}
             className='project__website project--site'
             target='_blank'
-            rel='nofollow'>
+            rel='nofollow noreferrer'>
             <WebIcon />
             Visit Site
           </a>
@@ -100,7 +100,7 @@ const Project = ({
             href={github}
             className='project__website project--github'
             target='_blank'
-            rel='nofollow'>
+            rel='nofollow noreferrer'>
             <GithubIcon />
             Visit Repo
           </a>
