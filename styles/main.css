@@ -186,7 +186,6 @@ p {
 
 .navbar__links {
   position: fixed;
-  left: 0%;
   left: -100%;
   top: 0;
   height: 100%;
@@ -199,28 +198,22 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: all ease 0.15s;
-  transition: all ease 0.15s;
 }
 
 .navbar__link {
   color: #262626;
   font-size: clamp(2rem, 2vw, 4rem);
-  padding: 0.5rem 0rem 0.5rem 0rem;
+  padding: 0.75rem 0rem 0.75rem 0rem;
   margin-left: 2rem;
   text-decoration: none;
 }
 
 .navbar__link:first-child {
-  margin-top: 1rem;
-}
-
-.navbar__link:not(:last-child) {
-  margin-bottom: 0.5rem;
+  margin-top: 3rem;
 }
 
 .navbar__spacer {
-  height: 3.5rem;
+  height: 4rem;
   width: 100%;
   background-color: #ffffff;
 }
@@ -240,6 +233,7 @@ p {
     width: fit-content;
     margin: auto 0;
     background-color: #ffffff;
+    gap: 2rem;
   }
   .navbar__link {
     font-size: 1.25rem;
@@ -249,10 +243,6 @@ p {
   }
   .navbar__link:first-child {
     margin-top: 0rem;
-  }
-  .navbar__link:not(:last-child) {
-    margin-bottom: 0rem;
-    margin-right: 2rem;
   }
 }
 

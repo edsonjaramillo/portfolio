@@ -7,7 +7,7 @@ $icon-size: 2.75rem;
   top: 0;
   padding: 0.5rem 0;
   z-index: 99;
-  // border: 1px solid red;
+  // border-bottom: 1px solid red;
 
   &__logo {
     margin: auto 0;
@@ -51,7 +51,6 @@ $icon-size: 2.75rem;
 
   &__links {
     position: fixed;
-    left: 0%;
     left: -100%;
     top: 0;
     height: 100%;
@@ -59,27 +58,23 @@ $icon-size: 2.75rem;
     background-color: $grayscale-100;
     display: flex;
     flex-direction: column;
-    transition: all ease 0.15s;
+    // gap: 0.5rem;
   }
 
   &__link {
     color: $brand-secondary-100;
     font-size: clamp(2rem, 2vw, 4rem);
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0.75rem 0rem 0.75rem 0rem;
     margin-left: 2rem;
     text-decoration: none;
 
     &:first-child {
-      margin-top: 1rem;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 0.5rem;
+      margin-top: 3rem;
     }
   }
 
   &__spacer {
-    height: 3.5rem;
+    height: 4rem;
     width: 100%;
     background-color: $grayscale-100;
   }
@@ -96,6 +91,7 @@ $icon-size: 2.75rem;
       width: fit-content;
       margin: auto 0;
       background-color: $grayscale-100;
+      gap: 2rem;
     }
 
     &__link {
@@ -103,21 +99,10 @@ $icon-size: 2.75rem;
       margin-left: 0rem;
       color: $brand-secondary-100;
       font-weight: 500;
-      // background-color: red;
-      // padding: 1rem 0rem;
 
       &:first-child {
         margin-top: 0rem;
       }
-
-      &:not(:last-child) {
-        margin-bottom: 0rem;
-        margin-right: 2rem;
-      }
     }
   }
 }
-
-// .open-nav {
-//   left: 0%;
-// }

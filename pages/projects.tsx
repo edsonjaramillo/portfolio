@@ -1,6 +1,4 @@
-import { Section } from '@/components/index';
 import Image from 'next/image';
-import { gunzip } from 'zlib';
 
 interface Project {
   title: string;
@@ -94,7 +92,7 @@ const Project = ({
             target='_blank'
             rel='nofollow noreferrer'>
             <WebIcon />
-            Visit Site
+            Visit Webite
           </a>
           <a
             href={github}

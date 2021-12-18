@@ -69,6 +69,14 @@ const Navbar = () => {
     </button>
   );
 
+  const PageLink = ({ route, name }: PageLink) => (
+    <Link href={route}>
+      <a className='navbar__link' onClick={() => setIsOpen(false)}>
+        {name}
+      </a>
+    </Link>
+  );
+
   return (
     <>
       <header>
@@ -96,29 +104,5 @@ const Navbar = () => {
     </>
   );
 };
-
-const closeMenu = () => {
-  // const links: HTMLElement | null = document.getElementById('hamburger-menu');
-  // if (links?.classList.contains('open-nav') == true) {
-  //   links?.classList.remove('open-nav');
-  // }
-};
-
-const changeMenu = () => {
-  // const links: HTMLElement | null = document.getElementById('hamburger-menu');
-  // if (links?.classList.contains('open-nav') == true) {
-  //   links?.classList.remove('open-nav');
-  // } else {
-  //   links?.classList.add('open-nav');
-  // }
-};
-
-const PageLink = ({ route, name }: PageLink) => (
-  <Link href={route}>
-    <a className='navbar__link' onClick={() => closeMenu()}>
-      {name}
-    </a>
-  </Link>
-);
 
 export default Navbar;

@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
@@ -21,6 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ToastContainer theme='colored' closeOnClick pauseOnHover draggable={false} />
     </>
   );
-}
+};
 
 export default MyApp;

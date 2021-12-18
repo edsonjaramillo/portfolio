@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
-import { toastNotification } from '@/lib/toastNotification';
 import { CTA, AboutMe } from '@/components/index';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <>
       <CTA />
@@ -11,4 +10,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default HomePage;
