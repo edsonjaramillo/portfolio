@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import { toastNotification } from '@/lib/toastNotification';
 import { HeadOpenGraph } from '../components';
@@ -43,14 +43,14 @@ const ContactPage = () => {
   };
 
   const ErrorMessage = ({ message }: ErrorMessageType) => (
-    <m.p
+    <motion.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
       className='form__errormessage'>
       {message}
-    </m.p>
+    </motion.p>
   );
 
   return (

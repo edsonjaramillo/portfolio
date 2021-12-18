@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { m, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
 
 interface PageLink {
@@ -85,7 +85,7 @@ const Navbar = () => {
             <Link href='/'>
               <a className='navbar__logo'>Logo</a>
             </Link>
-            <m.div
+            <motion.div
               initial='close'
               variants={navVariants}
               animate={isOpen ? 'open' : 'close'}
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <PageLink key={link.name} route={link.route} name={link.name} />
               ))}
               <ExitIcon />
-            </m.div>
+            </motion.div>
             <Hamburger />
           </div>
         </nav>
