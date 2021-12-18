@@ -56,7 +56,7 @@ const ContactPage = () => {
   return (
     <>
       <HeadOpenGraph
-        title='Contact'
+        title='Contact Us'
         description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis!'
         image='https://via.placeholder.com/1200x630'
         alt='Alt'

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { HeadOpenGraph } from '@/components/index';
 
 interface Project {
   title: string;
@@ -61,6 +62,12 @@ const Projects: Project[] = [
 const ProjectsPage = () => {
   return (
     <>
+      <HeadOpenGraph
+        title='Projects'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis!'
+        image='https://via.placeholder.com/1200x630'
+        alt='Alt'
+      />
       <div className='projectsgrid'>
         {Projects.map((project) => (
           <Project key={project.title} {...project} />
