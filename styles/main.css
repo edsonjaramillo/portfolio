@@ -351,7 +351,7 @@ p {
 .section {
   padding: clamp(1.25rem, 4vw, 2.5rem) 0rem;
   position: relative;
-  scroll-margin-top: clamp(1.25rem, 4vw, 2.5rem);
+  scroll-margin-top: 3rem;
 }
 
 .section__contentgrid {
@@ -999,7 +999,8 @@ p {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.9rem;
-  color: #262626;
+  color: #172c4b;
+  font-weight: 500;
 }
 
 .form__input {

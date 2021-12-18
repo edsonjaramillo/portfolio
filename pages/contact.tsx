@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import { toastNotification } from '@/lib/toastNotification';
+import { HeadOpenGraph } from '../components';
 
 interface ErrorMessageType {
   message: string;
@@ -42,26 +43,33 @@ const ContactPage = () => {
   };
 
   const ErrorMessage = ({ message }: ErrorMessageType) => (
-    <motion.p
+    <m.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
       className='form__errormessage'>
       {message}
-    </motion.p>
+    </m.p>
   );
 
   return (
     <>
+      <HeadOpenGraph
+        title='Contact'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis!'
+        image='https://via.placeholder.com/1200x630'
+        alt='Alt'
+      />
+
       <div className='contact'>
         <div className='contact__grid'>
-          <h2 className='contact__greeting'>GOT A QUESTION?</h2>
+          <p className='contact__greeting'>GOT A QUESTION?</p>
           <h1 className='contact__header'>Contact Me</h1>
-          <h3 className='contact__subheader'>
+          <h2 className='contact__subheader'>
             {`I hope to help and answer any questions you might have. I look
             forward to hearing from you.`}
-          </h3>
+          </h2>
         </div>
       </div>
 

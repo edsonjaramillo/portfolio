@@ -3,16 +3,10 @@ import type { AppProps } from 'next/app';
 import { Navbar, Footer } from '@/components/index';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Head from 'next/head';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Head>
-        <title>Hello</title>
-        <link rel='canonical' href='https://portfolio-six-rho-28.vercel.app/' />
-        <meta name='theme-color' content='#172c4b' />
-      </Head>
       <Navbar />
       <main>
         <Component {...pageProps} />
