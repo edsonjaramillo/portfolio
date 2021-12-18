@@ -256,10 +256,6 @@ p {
   }
 }
 
-.open-nav {
-  left: 0%;
-}
-
 .footer {
   background-color: #172c4b;
   padding: clamp(2rem, 4vw, 4rem) 0rem;
