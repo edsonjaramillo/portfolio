@@ -22,7 +22,6 @@ const HeadOpenGraph = ({
 }: HeadOpenGraphProps) => {
   const router = useRouter();
   const url = 'https://edson-portfolio.com';
-  // const url = 'https://edsonjaramillo.com';
 
   return (
     <Head>
@@ -33,6 +32,7 @@ const HeadOpenGraph = ({
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={image} />
+      <meta property='og:image:alt' content={alt} />
       <meta name='twitter:card' content='summary_large_image' />
       <meta property='twitter:domain' content={url} />
       <meta property='twitter:url' content={url} />

@@ -812,8 +812,8 @@ p {
 }
 
 .project__gaugecircle {
+  aspect-ratio: 1;
   background-color: rgba(0, 138, 0, 0.15);
-  aspect-ratio: 1/1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
