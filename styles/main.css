@@ -4,7 +4,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #ffffff;
 }
 
@@ -49,7 +49,11 @@ object {
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.75;
+}
+
+a {
+  text-decoration: none;
 }
 
 .responsive-width {
@@ -142,6 +146,27 @@ p {
   z-index: 99;
 }
 
+.navbar__skipcontent {
+  position: absolute;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  padding: 0.68rem 1.275rem;
+  font-size: 0.85rem;
+  background-color: #172c4b;
+  color: #ffffff;
+  z-index: 100;
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-left: 0.5rem;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.navbar__skipcontent:focus {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  border: 2px solid #c62131;
+}
+
 .navbar__logo {
   margin: auto 0;
 }
@@ -164,7 +189,7 @@ p {
 }
 
 .navbar__hamburger {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
   fill: #1f2937;
 }
 
@@ -205,7 +230,6 @@ p {
   font-size: clamp(2rem, 2vw, 4rem);
   padding: 0.75rem 0rem 0.75rem 0rem;
   margin-left: 2rem;
-  text-decoration: none;
 }
 
 .navbar__link:first-child {
@@ -275,7 +299,6 @@ p {
 
 .footer__link {
   color: #ffffff;
-  text-decoration: none;
 }
 
 .footer__linksgrid {
@@ -492,6 +515,58 @@ p {
   color: #000000;
 }
 
+.legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem 0rem;
+}
+
+.legal__header {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.legal__subheader {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.legal__sub-subheader {
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+.legal__strong {
+  font-weight: 600;
+}
+
+.legal__link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.legal__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legal__bullet {
+  margin-left: 3rem;
+  list-style-type: disc;
+}
+
 .cta {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAMRJREFUaEPtljEOwjAAxJrf8SOE0jER4kf8Loi1EpuvSoM7dnBzdoaWbbGnLLZn+zmotfbc9/1xtcEOmr2YhS5RqPd+Px60lHIbY7yP72utr5lHeeVmrvM9m4UsdLKB//mXO1ks9jkLYSpDIAuFxGJYC2EqQyALhcRiWAthKkMgC4XEYlgLYSpDIAuFxGJYC2EqQyALhcRiWAthKkMgC4XEYlgLYSpDIAuFxGJYC2EqQyALhcRiWAthKkMgC4XEYtjlCn0AC+8wNY7+9VoAAAAASUVORK5CYII=");
   min-height: calc(100vh - (2.875rem * 4));
@@ -550,7 +625,6 @@ p {
   font-size: 1rem;
   font-weight: 600;
   border-radius: 0.5rem;
-  text-decoration: none;
   text-align: center;
   cursor: pointer;
   display: -webkit-box;
@@ -579,7 +653,6 @@ p {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  text-decoration: none;
   text-align: center;
   cursor: pointer;
   font-weight: 600;
@@ -686,7 +759,6 @@ p {
   color: #ffffff;
   cursor: pointer;
   font-weight: 500;
-  text-decoration: none;
 }
 
 .project {
@@ -747,7 +819,6 @@ p {
   font-weight: 500;
   border-radius: 0.5rem;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .project--github {
@@ -979,9 +1050,9 @@ p {
 }
 
 .form__radioinput {
-  accent-color: #172c4b;
-  margin-right: 0.1rem;
+  accent-color: #c62131;
   background-color: #ffffff;
+  margin-right: 0.25rem;
 }
 
 .form__radiolabel {
@@ -1013,7 +1084,7 @@ p {
   font-size: 1rem;
   border: 1px solid #6b7280;
   color: #374151;
-  font-family: "Inter";
+  font-family: "Poppins";
 }
 
 .form__input:focus {
@@ -1022,7 +1093,7 @@ p {
 
 .form--textarea {
   resize: vertical;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .form__statusgrid {
@@ -1087,7 +1158,6 @@ p {
   background-color: #262626;
   border-radius: 0.5rem;
   padding: 1rem;
-  text-decoration: none;
   color: #ffffff;
   -webkit-box-align: center;
       -ms-flex-align: center;

@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-type RobotTagTypes = 'index,follow' | 'noindex,nofollow';
+type RobotTagTypes = 'index, follow' | 'noindex, nofollow';
+type OpenGraphTypes = 'article' | 'website' | 'profile' | 'book';
 
 interface HeadOpenGraphProps {
   title: string;
   description: string;
   image: string;
   alt: string;
-  robots?: RobotTagTypes | undefined;
+  ogType?: OpenGraphTypes;
+  robots?: RobotTagTypes;
   children?: any;
 }
 
@@ -17,18 +19,19 @@ const HeadOpenGraph = ({
   description,
   image,
   alt,
-  robots,
+  ogType = 'website',
+  robots = 'index, follow',
   children,
 }: HeadOpenGraphProps) => {
-  const router = useRouter();
+  const { asPath } = useRouter();
   const url = 'https://edson-portfolio.com';
 
   return (
     <Head>
-      <title>{`${title} | Edson Jaramillo`}</title>
+      <title>{`${title} | Portfolio`}</title>
       <meta name='description' content={description} />
       <meta property='og:url' content={url} />
-      <meta property='og:type' content='website' />
+      <meta property='og:type' content={ogType} />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={image} />
@@ -40,14 +43,9 @@ const HeadOpenGraph = ({
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={image} />
       <meta name='twitter:image:alt' content={alt} />
-      <link rel='canonical' href={`${url}${router.asPath}`} />
+      <link rel='canonical' href={url + asPath} />
       <meta name='theme-color' content='#172c4b' />
-      {robots ? (
-        <meta name='robots' content={robots} />
-      ) : (
-        <meta name='robots' content='index,follow' />
-      )}
-
+      <meta name='robots' content={robots} />
       {children}
     </Head>
   );

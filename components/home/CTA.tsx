@@ -9,8 +9,8 @@ const CTA = () => {
             Hello. <br /> I am Edson Jaramillo.
           </h1>
           <p className='cta__subheader'>
-            I am a fullstack web developer based in the United States who specializes in
-            React.js.
+            I am a web developer based in the United States who specializes in creating
+            scalable and accessible web applications.
           </p>
           <div className='cta__buttongrid'>
             <Link href='/projects'>

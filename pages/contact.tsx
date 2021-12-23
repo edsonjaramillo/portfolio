@@ -1,57 +1,48 @@
 import { useForm } from 'react-hook-form';
-import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import { toastNotification } from '@/lib/toastNotification';
-import { HeadOpenGraph } from '../components';
-
-interface ErrorMessageType {
-  message: string;
-}
+import {
+  HeadOpenGraph,
+  CustomInput,
+  TextFieldInput,
+  FormGroupLabel,
+  RadioInput,
+} from '@/components/index';
 
 const ContactPage = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
   const onSubmit = async (data: any) => {
     const { name } = data;
 
-    const templateParameters = {
-      name: data.name,
-      email: data.email,
-      phoneNumber: data.phoneNumber,
-      choice: data.choice,
-      message: data.message,
-    };
+    console.log(data);
 
-    const { status } = await emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-      templateParameters,
-      process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
-    );
+    // const templateParameters = {
+    //   name: data.name,
+    //   email: data.email,
+    //   phoneNumber: data.phoneNumber,
+    //   choice: data.choice,
+    //   message: data.message,
+    // };
 
-    if (status == 200) {
-      toastNotification('success', `Your message was sent, ${name}!`);
-      reset();
-    } else {
-      toastNotification('error', 'Error occured. Try again.');
-    }
+    // const { status } = await emailjs.send(
+    //   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+    //   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+    //   templateParameters,
+    //   process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
+    // );
+
+    // if (status == 200) {
+    //   toastNotification('success', `Your message was sent, ${name}!`);
+    //   reset();
+    // } else {
+    //   toastNotification('error', 'Error occured. Try again.');
+    // }
   };
-
-  const ErrorMessage = ({ message }: ErrorMessageType) => (
-    <motion.p
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.25 }}
-      className='form__errormessage'>
-      {message}
-    </motion.p>
-  );
 
   return (
     <>
@@ -66,10 +57,10 @@ const ContactPage = () => {
         <div className='contact__grid'>
           <p className='contact__greeting'>GOT A QUESTION?</p>
           <h1 className='contact__header'>Contact Me</h1>
-          <h2 className='contact__subheader'>
-            {`I hope to help and answer any questions you might have. I look
-            forward to hearing from you.`}
-          </h2>
+          <p className='contact__subheader'>
+            I hope to help and answer any questions you might have. I look forward to hearing
+            from you.
+          </p>
         </div>
       </div>
 
@@ -79,87 +70,67 @@ const ContactPage = () => {
           toastNotification('error', 'Check input fields')
         )}>
         <div className='form__grid responsive-width-form'>
-          <div className='form__inputgroup'>
-            <label className='form__label' htmlFor='name'>
-              Name
-              {errors.name?.type === 'required' && <ErrorMessage message='Required' />}
-            </label>
-
-            <input
-              className='form__input'
+          <FormGroupLabel name='name' label='Name' errors={errors.name}>
+            <CustomInput
+              type='text'
+              name='name'
               placeholder='Jane Doe'
-              {...register('name', { required: true })}
+              register={register}
+              req={{ required: { value: true, message: 'Required' } }}
             />
-          </div>
-          {/* Email */}
-          <div className='form__inputgroup'>
-            <label className='form__label' htmlFor='email'>
-              Email
-              {errors.email?.type === 'required' && <ErrorMessage message='Required' />}
-            </label>
-
-            <input
-              className='form__input'
+          </FormGroupLabel>
+          <FormGroupLabel name='email' label='Email' errors={errors.email}>
+            <CustomInput
+              type='text'
+              name='email'
               placeholder='janedoe@me.com'
-              {...register('email', { required: true })}
+              register={register}
+              req={{ required: { value: true, message: 'Required' } }}
             />
-          </div>
-          {/* Phone Number */}
-          <div className='form__inputgroup'>
-            <label className='form__label' htmlFor='phoneNumber'>
-              Phone Number
-            </label>
-            <input
-              className='form__input'
-              placeholder='1234567890'
-              {...register('phoneNumber')}
+          </FormGroupLabel>
+          <FormGroupLabel name='phone' label='Phone Number' errors={errors.phone}>
+            <CustomInput
+              type='text'
+              name='phone'
+              placeholder='0123456789'
+              register={register}
+              req={{ required: { value: true, message: 'Required' } }}
             />
-          </div>
-
-          {/* Message */}
-          <div className='form__inputgroup'>
-            <label className='form__label '>
-              Message
-              {errors.message?.type === 'required' && <ErrorMessage message='Required' />}
-            </label>
-
-            <textarea
-              className='form__input form--textarea'
-              placeholder='Enter message...'
-              rows={10}
-              {...register('message', { required: true })}></textarea>
-          </div>
+          </FormGroupLabel>
+          <FormGroupLabel name='message' label='Message' errors={errors.message}>
+            <TextFieldInput
+              name='message'
+              placeholder='Enter Message'
+              register={register}
+              req={{ required: { value: true, message: 'Required' } }}
+            />
+          </FormGroupLabel>
           {/* Choice */}
-          <div className='form__inputgroup'>
-            <label className='form__label' htmlFor='phoneNumber'>
-              Response Choice
-              {errors.choice?.type === 'required' && <ErrorMessage message='Required' />}
-            </label>
-
+          <FormGroupLabel name='' label='Response Choice' errors={errors.choice}>
             <div className='form__radiogroup'>
-              <label className='form__radiolabel'>
-                <input
-                  className='form__radioinput'
-                  type='radio'
-                  id='Email'
+              <label className='form__radiolabel' htmlFor='choice-Email'>
+                <RadioInput
+                  name='choice'
                   value='Email'
-                  {...register('choice', { required: true })}
+                  register={register}
+                  req={{ required: { value: true, message: 'Required' } }}
                 />
                 Email
               </label>
-              <label className='form__radiolabel'>
-                <input
-                  className='form__radioinput'
-                  type='radio'
-                  id='Phone'
+              <label className='form__radiolabel' htmlFor='choice-Phone'>
+                <RadioInput
+                  name='choice'
                   value='Phone'
-                  {...register('choice', { required: true })}
+                  register={register}
+                  req={{ required: { value: true, message: 'Required' } }}
                 />
                 Phone
               </label>
             </div>
-          </div>
-          <input className='form__button' type='submit' value='Send Message' />
+          </FormGroupLabel>
+          <button type='submit' className='form__button'>
+            Send Message
+          </button>
         </div>
       </form>
     </>

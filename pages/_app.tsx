@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Navbar />
-      <main>
+      <main id='main-content'>
         <Component {...pageProps} />
       </main>
       <Footer />
