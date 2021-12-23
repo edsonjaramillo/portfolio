@@ -549,6 +549,7 @@ a {
 .legal__link {
   color: blue;
   text-decoration: underline;
+  overflow-wrap: break-word;
 }
 
 .legal__list {
