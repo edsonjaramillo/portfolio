@@ -14,7 +14,7 @@ const TermsPage = () => {
         name={`Edson's Portfolio`}
         email='edsonajaramillo@gmail.com'
         phone='(256) 673-8968'
-        website='https://edsonjaramillo.com'
+        website='https://edson-portfolio.vercel.app/'
       />
     </>
   );

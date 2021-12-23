@@ -24,7 +24,7 @@ const HeadOpenGraph = ({
   children,
 }: HeadOpenGraphProps) => {
   const { asPath } = useRouter();
-  const url = 'https://edson-portfolio.com';
+  const url = 'https://edson-portfolio.vercel.app/';
 
   return (
     <Head>
