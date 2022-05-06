@@ -19,7 +19,11 @@ const ContactPage = () => {
   const onSubmit = async (data: any) => {
     const { name } = data;
 
-    console.log(data);
+    toastNotification(
+      'success',
+      `Thank you ${name} for your message. I will get back to you as soon as possible.`,
+      5000
+    );
 
     // const templateParameters = {
     //   name: data.name,
@@ -55,19 +59,19 @@ const ContactPage = () => {
 
       <div className='contact'>
         <div className='contact__grid'>
-          <p className='contact__greeting'>GOT A QUESTION?</p>
+          <span className='contact__greeting'>GOT A QUESTION?</span>
           <h1 className='contact__header'>Contact Me</h1>
-          <p className='contact__subheader'>
-            I hope to help and answer any questions you might have. I look forward to hearing
-            from you.
-          </p>
+          <span className='contact__subheader'>
+            I hope to help and answer any questions you might have. I look forward to hearing from
+            you.
+          </span>
         </div>
       </div>
 
       <form
         className='form'
         onSubmit={handleSubmit(onSubmit, () =>
-          toastNotification('error', 'Check input fields')
+          toastNotification('error', 'Check input requirements.')
         )}>
         <div className='form__grid responsive-width-form'>
           <FormGroupLabel name='name' label='Name' errors={errors.name}>
@@ -85,7 +89,13 @@ const ContactPage = () => {
               name='email'
               placeholder='janedoe@me.com'
               register={register}
-              req={{ required: { value: true, message: 'Required' } }}
+              req={{
+                required: { value: true, message: 'Required' },
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  message: 'Invalid email address',
+                },
+              }}
             />
           </FormGroupLabel>
           <FormGroupLabel name='phone' label='Phone Number' errors={errors.phone}>
@@ -94,7 +104,15 @@ const ContactPage = () => {
               name='phone'
               placeholder='0123456789'
               register={register}
-              req={{ required: { value: true, message: 'Required' } }}
+              req={{
+                required: { value: true, message: 'Required' },
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message: 'Must be 10 digit numbers',
+                },
+                minLength: { value: 10, message: 'Must be 10 digits' },
+                maxLength: { value: 10, message: 'Must be 10 digits' },
+              }}
             />
           </FormGroupLabel>
           <FormGroupLabel name='message' label='Message' errors={errors.message}>
@@ -108,6 +126,15 @@ const ContactPage = () => {
           {/* Choice */}
           <FormGroupLabel name='' label='Response Choice' errors={errors.choice}>
             <div className='form__radiogroup'>
+              <label className='form__radiolabel' htmlFor='choice-Either'>
+                <RadioInput
+                  name='choice'
+                  value='Either'
+                  register={register}
+                  req={{ required: { value: true, message: 'Required' } }}
+                />
+                Either
+              </label>
               <label className='form__radiolabel' htmlFor='choice-Email'>
                 <RadioInput
                   name='choice'
