@@ -77,33 +77,32 @@ const Navbar = () => {
   );
 
   return (
-    <>
-      <header>
-        <a href='#main-content' className='navbar__skipcontent'>
-          Skip To Cont ent
-        </a>
-        <nav className='navbar' title='main navigation bar'>
-          <div className='navbar__content responsive-width'>
-            <Link href='/'>
-              <a className='navbar__logo'>Logo</a>
-            </Link>
-            <motion.div
-              initial='close'
-              variants={navVariants}
-              animate={isOpen ? 'open' : 'close'}
-              id='hamburger-menu'
-              className='navbar__links'>
-              {navbarLinks.map((link) => (
-                <PageLink key={link.name} route={link.route} name={link.name} />
-              ))}
-              <ExitIcon />
-            </motion.div>
-            <Hamburger />
-          </div>
-        </nav>
-        <div arial-hidden='true' className='navbar__spacer' />
-      </header>
-    </>
+    <header>
+      <a href='#main-content' className='navbar__skipcontent'>
+        Skip To Cont ent
+      </a>
+      <nav className='navbar' title='main navigation bar'>
+        <div className='navbar__content responsive-width'>
+          <Link href='/'>
+            <a aria-label='Go to homepage' className='navbar__logo'>
+              Edson Jaramillo
+            </a>
+          </Link>
+          <motion.div
+            initial='close'
+            variants={navVariants}
+            animate={isOpen ? 'open' : 'close'}
+            className='navbar__links'>
+            {navbarLinks.map((link) => (
+              <PageLink key={link.name} route={link.route} name={link.name} />
+            ))}
+            <ExitIcon />
+          </motion.div>
+          <Hamburger />
+        </div>
+      </nav>
+      <div arial-hidden='true' className='navbar__spacer' />
+    </header>
   );
 };
 
