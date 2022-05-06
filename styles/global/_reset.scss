@@ -4,7 +4,6 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: $font-family, sans-serif;
   background-color: $grayscale-100;
 }
 
@@ -45,12 +44,14 @@ object {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-family, sans-serif;
 }
 
 p {
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
