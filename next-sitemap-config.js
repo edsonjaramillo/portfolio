@@ -1,8 +1,15 @@
+/** @type {import('next-sitemap').IConfig} */
+
 module.exports = {
-  siteUrl: 'https://edson-portfolio.vercel.app',
+  siteUrl: 'https://edsonjaramillo.com',
   generateRobotsTxt: true,
+  changefreq: 'daily',
   robotsTxtOptions: {
-    policies: [, { userAgent: '*', allow: '/', disallow: ['/terms', '/privacy'] }],
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
   },
-  exclude: ['/terms', '/privacy'],
 };
