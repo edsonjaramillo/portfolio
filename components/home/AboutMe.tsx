@@ -18,16 +18,16 @@ const AboutMe = () => {
           <div className='about__bodygrid'>
             <p className='about__body'>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad possimus quis, ipsam
-              tempore expedita fugit eos doloremque culpa facere temporibus? Voluptates
-              consectetur repudiandae et magnam accusamus. Voluptatum adipisci exercitationem
-              distinctio quae cupiditate natus reprehenderit consequatur dolorum! Dolorem
-              itaque omnis laboriosam rem, ex minima repudiandae eos ipsam, magnam facilis
-              assumenda explicabo ullam vitae possimus beatae eligendi illum delectus eaque
-              nisi voluptate dolorum. Exercitationem officia nisi dicta voluptates illo
-              deserunt porro sint amet pariatur, perferendis ea? Explicabo rem earum obcaecati
-              illum qui voluptate rerum autem incidunt praesentium, itaque eligendi iste unde
-              nam harum dolor ipsum laudantium at! Earum ab voluptatem inventore animi. Lorem
-              ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur dignissimos
+              tempore expedita fugit eos doloremque culpa facere temporibus? Voluptates consectetur
+              repudiandae et magnam accusamus. Voluptatum adipisci exercitationem distinctio quae
+              cupiditate natus reprehenderit consequatur dolorum! Dolorem itaque omnis laboriosam
+              rem, ex minima repudiandae eos ipsam, magnam facilis assumenda explicabo ullam vitae
+              possimus beatae eligendi illum delectus eaque nisi voluptate dolorum. Exercitationem
+              officia nisi dicta voluptates illo deserunt porro sint amet pariatur, perferendis ea?
+              Explicabo rem earum obcaecati illum qui voluptate rerum autem incidunt praesentium,
+              itaque eligendi iste unde nam harum dolor ipsum laudantium at! Earum ab voluptatem
+              inventore animi. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Consequuntur dignissimos
             </p>
             <a
               className='about__download'
@@ -35,9 +35,7 @@ const AboutMe = () => {
               download
               target='_blank'
               rel='noopener noreferrer'
-              onClick={() =>
-                toastNotification('success', 'Thank you for downloading my resume!')
-              }>
+              onClick={() => toastNotification('success', 'Thank you for downloading my resume!')}>
               <DownloadIcon />
               Download Resume
             </a>
@@ -50,10 +48,7 @@ const AboutMe = () => {
 
 const DownloadIcon = () => (
   <div className='about__downloadicon'>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      enableBackground='new 0 0 24 24'
-      viewBox='0 0 24 24'>
+    <svg xmlns='http://www.w3.org/2000/svg' enableBackground='new 0 0 24 24' viewBox='0 0 24 24'>
       <g>
         <rect fill='none' height='24' width='24' />
       </g>

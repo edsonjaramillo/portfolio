@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { copyrightYear } from '@/lib/copyrightYear';
 import { navbarLinks } from '@/components/shared/Navbar';
 
 interface FooterProps {
@@ -17,7 +16,7 @@ const Footer = () => {
         <div className='footer__grid'>
           <div className='footer__linksgrid responsive-width-footer'>
             <FooterSection>
-              <p className='footer__header'>Navigation</p>
+              <span className='footer__header'>Navigation</span>
               {navbarLinks.map((link) => (
                 <Link key={link.route} href={link.route}>
                   <a className='footer__link'>{link.name}</a>
@@ -25,7 +24,7 @@ const Footer = () => {
               ))}
             </FooterSection>
             <FooterSection>
-              <p className='footer__header'>Information</p>
+              <span className='footer__header'>Information</span>
               <Link href='/privacy'>
                 <a className='footer__link'>Privacy Policy</a>
               </Link>
@@ -37,7 +36,7 @@ const Footer = () => {
               </Link>
             </FooterSection>
             <FooterSection>
-              <p className='footer__header'>Contact Details</p>
+              <span className='footer__header'>Contact Details</span>
               <a aria-label='Phone Number' href='tel:2566738968' className='footer__link'>
                 (256) 673-8968
               </a>
@@ -67,7 +66,7 @@ const GithubIcon = () => (
     href='https://github.com'
     className='footer__socialicon'
     target='_blank'
-    rel='noreferrer external nofollow'
+    rel='noreferrer external nofollow noopener'
     aria-label='Link to Github profile'>
     <svg
       height='100%'
@@ -116,5 +115,13 @@ const LinkedinIcon = () => (
     </svg>
   </a>
 );
+
+/**
+ * @summary Get the current year for copyright footer
+ * @return {number} The current year
+ */
+const copyrightYear = (): number => {
+  return new Date().getFullYear();
+};
 
 export default Footer;

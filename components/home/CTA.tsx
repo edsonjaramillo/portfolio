@@ -8,10 +8,10 @@ const CTA = () => {
           <h1 className='cta__header'>
             Hello. <br /> I am Edson Jaramillo.
           </h1>
-          <p className='cta__subheader'>
-            I am a web developer based in the United States who specializes in creating
-            scalable, performant, and accessible web applications.
-          </p>
+          <span className='cta__subheader'>
+            I am a web developer based in the United States who specializes in creating scalable,
+            performant, and accessible web applications.
+          </span>
           <div className='cta__buttongrid'>
             <Link href='/projects'>
               <a className='cta__button'>My Projects</a>
