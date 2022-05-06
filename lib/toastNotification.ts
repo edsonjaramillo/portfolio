@@ -1,36 +1,31 @@
-import { toast } from 'react-toastify';
-
-interface Toast {
-  type: string;
-}
+import { toast, ToastOptions } from 'react-toastify';
 
 type ToastType = 'success' | 'error' | 'info' | 'warning';
 
-export const toastNotification = (type: ToastType, message: string, time: number = 3000) => {
+/**
+ * @summary Toast notification caller
+ * @param {ToastType} type 'success' | 'error' | 'info' | 'warning'
+ * @param {string} message
+ * @param {number} ms default: 3000 (3 seconds)
+ */
+export const toastNotification = (type: ToastType, message: string, ms: number = 3000) => {
+  const options: ToastOptions = {
+    position: 'top-right',
+    autoClose: ms,
+  };
+
   switch (type) {
     case 'info':
-      toast.info(message, {
-        position: 'top-right',
-        autoClose: time,
-      });
+      toast.info(message, options);
       break;
     case 'success':
-      toast.success(message, {
-        position: 'top-right',
-        autoClose: time,
-      });
+      toast.success(message, options);
       break;
     case 'error':
-      toast.error(message, {
-        position: 'top-right',
-        autoClose: time,
-      });
+      toast.error(message, options);
       break;
     case 'warning':
-      toast.warn(message, {
-        position: 'top-right',
-        autoClose: time,
-      });
+      toast.warn(message, options);
       break;
     default:
       break;
