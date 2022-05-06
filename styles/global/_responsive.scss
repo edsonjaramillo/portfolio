@@ -1,63 +1,33 @@
 .responsive-width {
-  width: 90%;
+  width: min(90%, 60rem);
   margin: auto;
-
-  // @include media('>lg') {
-  //   max-width: 90%;
-  // }
-
-  @include media('>xl') {
-    max-width: 65%;
-  }
-
-  @include media('>3xl') {
-    max-width: 100rem;
-  }
-}
-
-.responsive-width-half {
-  width: 90%;
-  margin: auto;
-  @include media('>lg') {
-    width: 75%;
-  }
-  @include media('>xl') {
-    width: 60%;
-  }
-  @include media('>3xl') {
-    max-width: 100rem;
-  }
 }
 
 .responsive-width-form {
-  width: clamp(1rem, 90vw, 40rem);
+  width: min(90%, 35rem);
   margin: auto;
 }
 
 .responsive-width-cta {
-  width: clamp(1rem, 90vw, 50rem);
+  width: min(90%, 50rem);
   margin: auto;
 }
 
-.responsive-width-projects {
-  width: clamp(1rem, 90vw, 40rem);
+.responsive-width-article {
+  width: min(90%, 50rem);
   margin: auto;
 }
 
 .responsive-width-contact {
-  width: 90%;
+  width: min(90%, 40rem);
   margin: auto;
-
-  @include media('>=md') {
-    width: 45rem;
-  }
-
-  @include media('>lg') {
-    width: fit-content;
-  }
 }
 
 .responsive-width-footer {
   width: fit-content;
   margin: auto;
+}
+
+.extended {
+  min-height: 150vh;
 }
