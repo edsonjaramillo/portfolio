@@ -24,7 +24,7 @@ const HeadOpenGraph = ({
   children,
 }: HeadOpenGraphProps) => {
   const { asPath } = useRouter();
-  const url = 'https://edson-portfolio.vercel.app/';
+  const url = 'https://edsonjaramillo.com';
 
   return (
     <Head>
@@ -44,7 +44,7 @@ const HeadOpenGraph = ({
       <meta name='twitter:image' content={image} />
       <meta name='twitter:image:alt' content={alt} />
       <link rel='canonical' href={url + asPath} />
-      <meta name='theme-color' content='#172c4b' />
+      <meta name='theme-color' content='#172C4B' />
       <meta name='robots' content={robots} />
       {children}
     </Head>
