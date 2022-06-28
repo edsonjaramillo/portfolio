@@ -4,17 +4,16 @@ const TermsPage = () => {
   return (
     <>
       <HeadOpenGraph
-        title='Terms of Use'
-        description='fbjhsdbfjbsdgfdgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdfgdf'
-        image='https://via.placeholder.com/1200x630'
-        alt='Alt'
-        robots='noindex, nofollow'
+        title='Terms and Conditions'
+        description='Terms and Conditions for the Edson Jaramillo Web Development Portfolio.'
+        image='https://media.graphassets.com/Hxh7E2dMQkG80kY4j8Jn'
+        alt={`Edson Jaramillo's Web Development Portfolio`}
       />
       <Terms
         name={`Edson's Portfolio`}
-        email='edsonajaramillo@gmail.com'
+        email='me@edsonjaramillo.com'
         phone='(256) 673-8968'
-        website='https://edson-portfolio.vercel.app/'
+        website='https://edsonjaramillo.com'
       />
     </>
   );

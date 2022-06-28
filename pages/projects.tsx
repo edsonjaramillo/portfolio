@@ -7,26 +7,28 @@ interface ProjectsPageProps {
   categories: CategoryType[];
 }
 
-const ProjectsPage = ({ categories }: ProjectsPageProps) => (
-  <>
-    <HeadOpenGraph
-      title='Projects'
-      description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis!'
-      image='https://via.placeholder.com/1200x630'
-      alt='Alt'
-    />
-    <div className='postsgrid responsive-width'>
-      {categories.map((category) => (
-        <section key={category.id}>
-          <h2 className='feedproject__category'>{category.name}</h2>
-          {category.projects.map((project) => (
-            <FeedProjectItem key={project.id} {...project} />
-          ))}
-        </section>
-      ))}
-    </div>
-  </>
-);
+const ProjectsPage = ({ categories }: ProjectsPageProps) => {
+  return (
+    <>
+      <HeadOpenGraph
+        title='Projects'
+        description='These are some of the projects made by Edson Jaramillo to show his skills and passion for web development.'
+        image='https://media.graphassets.com/Hxh7E2dMQkG80kY4j8Jn'
+        alt={`Edson Jaramillo's Web Development Portfolio`}
+      />
+      <div className='postsgrid responsive-width'>
+        {categories.map((category) => (
+          <section key={category.id}>
+            <h2 className='feedproject__category'>{category.name}</h2>
+            {category.projects.map((project) => (
+              <FeedProjectItem key={project.id} {...project} />
+            ))}
+          </section>
+        ))}
+      </div>
+    </>
+  );
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const { categories } = await graphCMSClient.request(getCategories);
