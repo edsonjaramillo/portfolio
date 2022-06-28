@@ -31,7 +31,7 @@ const Footer = () => {
               <Link href='/terms'>
                 <a className='footer__link'>Terms and Conditions</a>
               </Link>
-              <Link href='/sitemap.xml'>
+              <Link href='/sitemap'>
                 <a className='footer__link'>Sitemap</a>
               </Link>
             </FooterSection>
@@ -40,11 +40,8 @@ const Footer = () => {
               <a aria-label='Phone Number' href='tel:2566738968' className='footer__link'>
                 (256) 673-8968
               </a>
-              <a
-                href='mailto:edsonajaramillo@gmail.com'
-                className='footer__link'
-                aria-label='Email'>
-                edsonajaramillo@gmail.com
+              <a href='mailto:me@edsonjaramillo.com' className='footer__link' aria-label='Email'>
+                me@edsonjaramillo.com
               </a>
             </FooterSection>
           </div>
@@ -63,10 +60,10 @@ const Footer = () => {
 
 const GithubIcon = () => (
   <a
-    href='https://github.com'
+    href='https://github.com/edsonjaramillo?tab=repositories'
     className='footer__socialicon'
     target='_blank'
-    rel='noreferrer external nofollow noopener'
+    rel='noopener nofollow noreferrer external'
     aria-label='Link to Github profile'>
     <svg
       height='100%'
@@ -86,8 +83,8 @@ const LinkedinIcon = () => (
   <a
     href='https://linkedin.com'
     className='footer__socialicon'
+    rel='noopener nofollow noreferrer external'
     target='_blank'
-    rel='noreferrer external nofollow'
     aria-label='Link to LinkedIn profile'>
     <svg
       height='100%'
