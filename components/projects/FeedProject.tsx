@@ -23,7 +23,12 @@ export const FeedProjectItem = (project: ProjectType) => (
         </a>
       </Link>
       <span>{project.description}</span>
-      <FeedLinks {...project.projectlink} />
+      <FeedLinks
+        slug={project.slug}
+        github={project.projectlink.github}
+        hasDemo={project.projectlink.hasDemo}
+        website={project.projectlink.website}
+      />
     </div>
   </article>
 );
