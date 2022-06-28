@@ -1,6 +1,5 @@
 import { GraphQLClient, gql } from 'graphql-request';
 const ENDPOINT = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT as string;
-// Client Object
 export const graphCMSClient = new GraphQLClient(ENDPOINT);
 
 // Queries
@@ -38,7 +37,7 @@ export const getCategories = gql`
     categories {
       id
       name
-      projects {
+      projects(orderBy: sort_ASC) {
         id
         slug
         name
@@ -53,10 +52,20 @@ export const getCategories = gql`
         projectlink {
           id
           github
+          hasDemo
           website
-          youtube
         }
       }
+    }
+  }
+`;
+
+export const getSitemapLinks = gql`
+  query getSitemapLinks {
+    projects {
+      id
+      slug
+      name
     }
   }
 `;
@@ -73,10 +82,9 @@ export interface ProjectType {
 }
 
 export interface ProjectLinkType {
-  id: string;
   github: string;
+  hasDemo: boolean;
   website?: string;
-  youtube?: string;
 }
 
 export interface CustomerType {
