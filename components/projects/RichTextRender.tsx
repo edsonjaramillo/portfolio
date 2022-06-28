@@ -29,6 +29,9 @@ const richTextOverrides: NodeRendererType = {
       <BlurImage src={src!} width={width} height={height} layout='responsive' alt={altText} />
     </div>
   ),
+  video: ({ src, title }) => (
+    <video id='demo' src={src} title={title} controls width='100%' height='100%' />
+  ),
 };
 
 const RichTextRender = ({ content }: RichTextRenderProps) => (
