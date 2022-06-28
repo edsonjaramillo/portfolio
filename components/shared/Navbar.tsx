@@ -40,7 +40,7 @@ const navVariants: Variants = {
 };
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const Hamburger = () => (
     <button
@@ -79,12 +79,12 @@ const Navbar = () => {
   return (
     <header>
       <a href='#main-content' className='navbar__skipcontent'>
-        Skip To Cont ent
+        Skip To Content
       </a>
-      <nav className='navbar' title='main navigation bar'>
+      <nav className='navbar'>
         <div className='navbar__content responsive-width'>
           <Link href='/'>
-            <a aria-label='Go to homepage' className='navbar__logo'>
+            <a title='Go to homepage' className='navbar__logo'>
               Edson Jaramillo
             </a>
           </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
           <Hamburger />
         </div>
       </nav>
-      <div arial-hidden='true' className='navbar__spacer' />
+      <div aria-hidden='true' className='navbar__spacer' />
     </header>
   );
 };
