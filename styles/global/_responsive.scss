@@ -14,8 +14,14 @@
 }
 
 .responsive-width-article {
-  width: min(90%, 50rem);
+  width: min(90%, 45rem);
   margin: auto;
+}
+
+.responsive-width-sitemap {
+  width: min(90%, 45rem);
+  margin: auto;
+  min-height: 67vh;
 }
 
 .responsive-width-contact {

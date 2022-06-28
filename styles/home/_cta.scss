@@ -73,6 +73,25 @@
     }
   }
 
+  &__download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    @include button-size(0.95rem);
+    background-color: $brand-primary;
+    // width: fit-content;
+    border-radius: $border-radius;
+    color: $grayscale-100;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  &__downloadicon svg {
+    fill: white;
+    height: 1.75rem;
+  }
+
   @include media('>=sm') {
     &__buttongrid {
       flex-direction: row;

@@ -66,6 +66,10 @@ $layoutcontrol: '>48rem';
   }
 }
 
+#demo {
+  scroll-margin-block-start: 8rem;
+}
+
 .feedproject {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,7 @@ $layoutcontrol: '>48rem';
 
   &__title {
     font-weight: 600;
+    color: $brand-secondary-400;
 
     &:hover {
       text-decoration: underline;
@@ -148,9 +153,7 @@ $layoutcontrol: '>48rem';
 .feedlink {
   &__icon {
     width: 1.25rem;
-    // width: 1.45rem;
     aspect-ratio: 1/1;
-    // border: 1px solid red;
   }
 
   &__wrapper {
