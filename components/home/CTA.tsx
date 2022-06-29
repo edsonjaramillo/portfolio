@@ -8,8 +8,8 @@ const CTA = () => (
         Hello. <br /> I am Edson Jaramillo.
       </h1>
       <span className='cta__subheader'>
-        I am a full stack web developer based in the United States who specializes in creating scalable,
-        performant, and accessible web applications.
+        I am a full stack web developer based in the United States who specializes in creating
+        scalable, performant, and accessible web applications.
       </span>
       <div className='cta__buttongrid'>
         <Link href='/projects'>
@@ -17,11 +17,9 @@ const CTA = () => (
         </Link>
         <a
           className='cta__download'
-          href='Test_Resume.pdf'
-          target='_blank'
-          rel='noopener noreferrer'
-          onClick={() => toastNotification('success', 'Thank you for downloading my resume!')}
-          download>
+          href='edson_jaramillo_resume.pdf'
+          download
+          onClick={() => toastNotification('success', 'Thank you for downloading my resume!')}>
           <DownloadIcon />
           Download Resume
         </a>
