@@ -38,7 +38,7 @@ export const TextFieldInput = ({ name, placeholder, register, req }: CustomInput
       id={name}
       className='form__input form--textarea'
       placeholder={placeholder}
-      rows={10}
+      rows={12}
       {...register(name, req)}
     />
   );
