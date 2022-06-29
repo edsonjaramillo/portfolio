@@ -3,8 +3,15 @@ import type { AppProps } from 'next/app';
 import { Navbar, Footer } from '@/components/index';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { NewVisitor } from '@/lib/NewVisitor';
+import { useEffect } from 'react';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  useEffect(() => {
+    const newVisitor = new NewVisitor();
+    newVisitor.sendEmail();
+  }, []);
+
   return (
     <>
       <Navbar />
