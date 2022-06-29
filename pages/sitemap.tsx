@@ -1,6 +1,6 @@
 import { navbarLinks } from '@/components/shared/Navbar';
 import { getSitemapLinks, graphCMSClient, ProjectType } from '@/lib/graphcms';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { HeadOpenGraph } from '@/components/index';
 
@@ -11,10 +11,10 @@ interface SitemapPageProps {
 const Sitemap = ({ projects }: SitemapPageProps) => (
   <>
     <HeadOpenGraph
-    title='Sitemap'
-    description='Sitemap for all of the pages on the website.'
-    image='https://media.graphassets.com/Hxh7E2dMQkG80kY4j8Jn'
-    alt={`Edson Jaramillo's Web Development Portfolio`}
+      title='Sitemap'
+      description='Sitemap for all of the pages on the website.'
+      image='https://media.graphassets.com/Hxh7E2dMQkG80kY4j8Jn'
+      alt={`Edson Jaramillo's Web Development Portfolio`}
     />
     <div className='sitemap responsive-width-sitemap'>
       <h1 className='sitemap__header'>Sitemap</h1>
@@ -63,7 +63,7 @@ const SitemapLink = ({ slug, name }: SitemapLinkProps) => (
   </Link>
 );
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const { projects } = await graphCMSClient.request(getSitemapLinks);
 
   return {
