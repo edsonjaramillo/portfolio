@@ -6,6 +6,7 @@ interface FooterProps {
 }
 
 const Footer = () => {
+  
   const FooterSection = ({ children }: FooterProps) => (
     <div className='footer__section'>{children}</div>
   );
@@ -81,7 +82,7 @@ const GithubIcon = () => (
 
 const LinkedinIcon = () => (
   <a
-    href='https://linkedin.com'
+    href='https://www.linkedin.com/in/edson-jaramillo-bb0191242/'
     className='footer__socialicon'
     rel='noopener nofollow noreferrer external'
     target='_blank'
