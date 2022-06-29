@@ -1,72 +1,68 @@
 import { RegisterOptions, UseFormRegister, FieldValues } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import { InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
+
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  id: string;
+  register: UseFormRegister<FieldValues>;
+  validation?: RegisterOptions;
+}
+
+export const CustomInput = ({ id, register, validation, ...other }: InputProps) => (
+  <input className='form__input' id={id} {...other} {...register(id!, validation)} />
+);
+
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  id: string;
+  register: UseFormRegister<FieldValues>;
+  validation?: RegisterOptions;
+}
+
+export const TextFieldInput = ({ id, register, validation, ...other }: TextAreaProps) => (
+  <textarea
+    className='form__input form--textarea'
+    id={id}
+    {...other}
+    {...register(id!, validation)}
+  />
+);
+
+interface RadioInputProps extends InputProps {
+  value: string;
+}
+
+export const RadioInput = ({ id, value, register, validation }: RadioInputProps) => (
+  <input
+    id={`${id}-${value}`}
+    type='radio'
+    className='form__radioinput'
+    value={value}
+    {...register(id!, validation)}
+  />
+);
+
+interface FormGroupLabelProps {
+  name: string;
+  label: string;
+  errors: {
+    [key: string]: string;
+  };
+  children?: React.ReactNode;
+}
+
+export const FormGroupLabel = ({ name, label, errors, children }: FormGroupLabelProps) => (
+  <div className='form__inputgroup'>
+    <label className='form__label' htmlFor={name}>
+      {label}
+      {errors && <ErrorMessage message={errors.message} />}
+    </label>
+    {children}
+  </div>
+);
 
 interface ErrorMessageType {
   message: string;
 }
-
-interface CustomInputProps {
-  name: string;
-  placeholder: string;
-  type?: string;
-  register: UseFormRegister<FieldValues>;
-  req: RegisterOptions;
-}
-
-interface RadioInputProps {
-  name: string;
-  value: string;
-  register: UseFormRegister<FieldValues>;
-  req: RegisterOptions;
-}
-
-export const CustomInput = ({ name, type, placeholder, register, req }: CustomInputProps) => {
-  return (
-    <input
-      id={name}
-      type={type}
-      placeholder={placeholder}
-      className='form__input'
-      {...register(name, req)}
-    />
-  );
-};
-
-export const TextFieldInput = ({ name, placeholder, register, req }: CustomInputProps) => {
-  return (
-    <textarea
-      id={name}
-      className='form__input form--textarea'
-      placeholder={placeholder}
-      rows={12}
-      {...register(name, req)}
-    />
-  );
-};
-
-export const FormGroupLabel = ({ name, label, errors, children }: any) => {
-  return (
-    <div className='form__inputgroup'>
-      <label className='form__label' htmlFor={name}>
-        {label}
-        {errors && <ErrorMessage message={errors.message} />}
-      </label>
-      {children}
-    </div>
-  );
-};
-
-export const RadioInput = ({ name, value, register, req }: RadioInputProps) => {
-  return (
-    <input
-      className='form__radioinput'
-      type='radio'
-      id={`${name}-${value}`}
-      value={value}
-      {...register(name, req)}
-    />
-  );
-};
 
 export const ErrorMessage = ({ message }: ErrorMessageType) => (
   <motion.span

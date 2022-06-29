@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { toastNotification } from '@/lib/toastNotification';
 import { HeadOpenGraph, CustomInput, TextFieldInput, FormGroupLabel } from '@/components/index';
+import { validationStandard, validationEmail } from '@/lib/validators';
 
 const ContactPage = () => {
   const {
@@ -67,34 +68,32 @@ const ContactPage = () => {
         <div className='form__grid responsive-width-form'>
           <FormGroupLabel name='name' label='Name' errors={errors.name}>
             <CustomInput
-              type='text'
+              id='name'
               name='name'
+              type='text'
               placeholder='Jane Doe'
               register={register}
-              req={{ required: { value: true, message: 'Required' } }}
+              validation={validationStandard}
             />
           </FormGroupLabel>
           <FormGroupLabel name='email' label='Email' errors={errors.email}>
             <CustomInput
-              type='text'
+              id='email'
               name='email'
+              type='text'
               placeholder='janedoe@me.com'
               register={register}
-              req={{
-                required: { value: true, message: 'Required' },
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: 'Invalid email address',
-                },
-              }}
+              validation={validationEmail}
             />
           </FormGroupLabel>
           <FormGroupLabel name='message' label='Message' errors={errors.message}>
             <TextFieldInput
+              id='message'
               name='message'
               placeholder='Enter Message'
+              rows={12}
               register={register}
-              req={{ required: { value: true, message: 'Required' } }}
+              validation={validationStandard}
             />
           </FormGroupLabel>
           {/* Choice */}
